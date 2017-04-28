@@ -16,7 +16,7 @@ module.exports.createComingSoon = function(req, res) {
   var eventBanner = req.body.banner;
   var eventName = req.body.eventName
 
-  fs.writeFile(__dirname +'/../public/images/event-banner/'+eventName+".png", eventBanner, 'base64', function(err) {
+  fs.writeFile(eventName+".png", eventBanner, 'base64', function(err) {
     if(err) {
       var message="Error in creating banner - "+err;
       console.log(message);
